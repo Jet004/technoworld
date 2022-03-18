@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "010973be-0239-44cf-ae7f-6e2ed999fdce",
+		"name": "TechnoWorld",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Push Dummy Data to DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/load-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"load-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query 1: get all employers with more than x positions for given role_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/query-one/{\"roleId\": 1, \"moreThan\": 2}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"query-one",
+						"{\"roleId\": 1, \"moreThan\": 2}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query 2: get all jobseekers with more than x experience in y role_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/query-two/{\"roleId\": 2, \"moreThan\": 5}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"query-two",
+						"{\"roleId\": 2, \"moreThan\": 5}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query 3: get all positions for x role_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/query-three/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"query-three",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query 4: get best fit list for specific db analyst position",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/query-four/394",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"query-four",
+						"394"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query 5: get visa status for all jobseekers with x role_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/query-five/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"query-five",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query 6: get position details where salary over $150000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/query-six/150000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"query-six",
+						"150000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

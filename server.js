@@ -1,11 +1,16 @@
 const express = require('express')
-const db = require('./database')
 
 const server = express()
 const PORT = 8200
 
+// Connect to DB
+const db = require('./database')
+
+
 const { pushData, deleteDbData } = require('./mock-data/pushData')
 
+// This is used to populate the database with dummy data for testing.
+// This is not required when importing the full database from techno-world.sql
 server.get('/load-data', (req, res) => {
     const success = pushData()
     console.log(success)
