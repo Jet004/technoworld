@@ -1209,6 +1209,117 @@ const jobseekers = [
             visaStatus: null,
             workingRights: "citizen"
         }
+    },{
+        email: 'c.burch@gmail.com',
+        firstName: 'Caius',
+        lastName: 'Burch',
+        password: bcrypt.hashSync('fdvbwf3433', 6),
+        phone: "0388999674",
+        dateJoined: Date.now()/1000,
+        skills: [
+            {
+                // requires email
+                skillID: '3',
+                skillLevel: "9"
+            },
+            {
+                // requires email
+                skillID: '4',
+                skillLevel: "8"
+            },
+            {
+                // requires email
+                skillID: '21',
+                skillLevel: "7"
+            },
+            {
+                // requires email
+                skillID: '22',
+                skillLevel: "9"
+            },
+        ],
+        employmentHistory: [
+            {
+                // requires email
+                startDate: new Date("2009 02 22")/1000,
+                endDate: new Date("2014 10 15")/1000,
+                role: "2",
+                details: "Total Data Inc."
+            },
+            {
+                // requires email
+                startDate: new Date("2014 12 01")/1000,
+                role: "2",
+                details: "The DB Professionals"
+            },
+        ],
+        qualifications: [
+            {
+                // requires email
+                qualificationID: "3",
+                gradYear: 2008
+            },
+        ],
+        visa: {
+            // email
+            passport: "B9846345",
+            visaNumber: "",
+            visaType: "",
+            visaStatus: "",
+            workingRights: "Citizen"
+        }
+    },{
+        email: 'aydan332@gmail.com',
+        firstName: 'Aydan',
+        lastName: 'Compton',
+        password: bcrypt.hashSync('fdvbwf3433', 6),
+        phone: "0211783908",
+        dateJoined: Date.now()/1000,
+        skills: [
+            {
+                // requires email
+                skillID: '3',
+                skillLevel: "8"
+            },
+            {
+                // requires email
+                skillID: '4',
+                skillLevel: "10"
+            },
+            {
+                // requires email
+                skillID: '21',
+                skillLevel: "7"
+            },
+            {
+                // requires email
+                skillID: '22',
+                skillLevel: "6"
+            },
+        ],
+        employmentHistory: [
+            {
+                // requires email
+                startDate: new Date("2013 02 22")/1000,
+                role: "2",
+                details: "Advanced Software Solutions"
+            },
+        ],
+        qualifications: [
+            {
+                // requires email
+                qualificationID: "3",
+                gradYear: 2012
+            },
+        ],
+        visa: {
+            // email
+            passport: "",
+            visaNumber: "",
+            visaType: "",
+            visaStatus: "",
+            workingRights: "Citizen"
+        }
     },
 ]
 

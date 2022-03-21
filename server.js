@@ -30,7 +30,7 @@ server.get('/query-one/:query', (req, res) => {
         `
             SELECT 
                 emp.employer_name, 
-                count(pos.id) as 'Number of Software Developer Positions'
+                count(pos.id) as 'Number of Positions'
             FROM employers emp
             JOIN positions pos ON (emp.abn_acn = pos.employer_id)
             JOIN role_requirements rolereq ON (pos.id = rolereq.position_id)
@@ -164,11 +164,6 @@ server.get('/query-four/:positionID', (req, res) => {
                 WHERE pos.id = ?
             )
             ORDER BY Alpha_Factor DESC
-           
-            
-            
-
-
         `,
         [positionID, positionID]
     )
@@ -230,6 +225,8 @@ server.get('/query-six/:salary', (req, res) => {
     db.query(
         `
             SELECT
+                pos.id as "Position ID",
+                roles.role,
                 pos.position_title as "Position Title",
                 pos.description as "Position Description",
                 pos.responsibilities as "Role Responsibilities",
@@ -244,8 +241,7 @@ server.get('/query-six/:salary', (req, res) => {
             JOIN role_requirements rolereq ON (rolereq.position_id = pos.id)
             JOIN roles ON (roles.id = rolereq.role_id)
             WHERE pos.min_salary >= ?
-            GROUP BY pos.id, roles.id
-            ORDER BY roles.role
+            GROUP BY roles.role, pos.id
         `,
         [salary]
     )
